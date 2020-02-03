@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -12,11 +9,12 @@ import java.util.regex.Pattern;
 
 public class Funksjoner {
 
-    public static String seEtterWebside(String input) throws IOException {
+    public static String seEtterWebside(String input) throws IOException,FileNotFoundException {
 
         URL url = null;
         try {
             url = new URL(input);
+
         } catch (MalformedURLException e) {
             e.printStackTrace();
             System.out.println("2");
@@ -24,8 +22,12 @@ public class Funksjoner {
         }
 
 
+
         URLConnection con = url.openConnection();
-        InputStream is = con.getInputStream();
+        InputStream is;
+
+        is = con.getInputStream();
+
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
         String line = null;

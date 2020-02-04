@@ -29,8 +29,6 @@ public class Klient {
 
         /////////////////////////////////////////////////////////////////////////////////////////////
         while (true) {
-
-
             if (serverResponse == null) {
                 System.out.println("!!!Server couldn’t find the web page!!");
                 break;

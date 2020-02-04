@@ -21,8 +21,6 @@ public class Funksjoner {
             return "2";
         }
 
-
-
         URLConnection con = url.openConnection();
         InputStream is;
 
@@ -84,10 +82,6 @@ public class Funksjoner {
         }
         System.out.println(emails.toString());
         return emails.toString();
-
-
-
-
 //http://student.cs.hioa.no/~s333770/InnovationCampFerdig/InnovationCampWebsite/
 
 
